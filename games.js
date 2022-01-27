@@ -47,6 +47,35 @@ function patterns() {
     }, 150)
     randomplaysound(randomcolor)
 }
+// comparing the pattern between user and computer
+//-----------------------------------------------------------
+function compare(index) {
+
+    if (pcpattern[index] === userpattern[index]) {
+        if (userpattern.length === pcpattern.length) {
+            setTimeout(function() {
+                patterns()
+            }, 1000)
+        }
+    } else {
+        randomplaysound("wrong")
+        document.getElementsByTagName("body")[0].classList.add("game-over")
+        document.getElementById("title").innerHTML = "Game over, Press Any Key to Restart"
+        setTimeout(function() {
+            document.getElementsByTagName("body")[0].classList.remove("game-over")
+
+        }, 250)
+
+        //we reset everything
+        pcpattern = []
+        level = 0
+        userpattern = []
+        game_start = false
+
+    }
+}
+
+
 //---------------------------------------------------------
 //play random sound 
 function randomplaysound(random_sound) {
