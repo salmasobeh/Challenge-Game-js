@@ -18,3 +18,25 @@ $(document).keypress(function() {
         game_start = true;
     }
 });
+
+
+//--------------------------------------------------------
+// the pattern of the pc
+function patterns() {
+    userpattern = [];
+    level++;
+    $("#title").text("level" + " " + level);
+    var randomcolor = btn_colors[Math.floor(Math.random() * btn_colors.length)];
+    pcpattern.push(randomcolor);
+    console.log(randomcolor);
+
+    $("#" + randomcolor).fadeOut("slow");
+    $("#" + randomcolor).fadeIn(100);
+    randomplaysound(randomcolor);
+}
+//--------------------------------------------------------
+//play random sound 
+function randomplaysound(random_sound) {
+    var audio = new Audio("sounds/" + random_sound + ".mp3");
+    audio.play()
+}
