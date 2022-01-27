@@ -34,6 +34,19 @@ function patterns() {
     $("#" + randomcolor).fadeIn(100);
     randomplaysound(randomcolor);
 }
+
+
+//this part is related to the user click on the buttons
+//------------------------------------------------------------
+
+$(".btn").click(function() {
+    var usercolor_id = $(this).attr('id');
+    //  console.log(usercolor_id + " hey")
+    userpattern.push(usercolor_id);
+    randomplaysound(usercolor_id);
+    buttonanimation(usercolor_id);
+    compare(userpattern.length - 1);
+});
 //--------------------------------------------------------
 //play random sound 
 function randomplaysound(random_sound) {
