@@ -31,3 +31,19 @@ for (var i = 0; i < btn.length; i++) {
         compare(userpattern.length - 1)
     }
 }
+
+//---------------------------------------------------------
+//play random sound 
+function randomplaysound(random_sound) {
+    var audio = new Audio("sounds/" + random_sound + ".mp3")
+    audio.play()
+}
+
+//---------------------------------------------------------
+//animate the buttons when clicked using class pressed
+function buttonanimation(colorbtn) {
+    document.getElementById("" + colorbtn).classList.add("pressed")
+    setTimeout(function() {
+        document.getElementById("" + colorbtn).classList.remove("pressed")
+    }, 150)
+}
