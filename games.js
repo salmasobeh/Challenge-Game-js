@@ -31,7 +31,22 @@ for (var i = 0; i < btn.length; i++) {
         compare(userpattern.length - 1)
     }
 }
+//--------------------------------------------------------
+// the pattern of the pc
+function patterns() {
+    userpattern = []
+    level++
+    document.getElementById("title").innerHTML = "level" + " " + level
+    var randomcolor = btn_colors[Math.floor(Math.random() * btn_colors.length)]
+    pcpattern.push(randomcolor)
+    console.log(randomcolor)
 
+    document.getElementById("" + randomcolor).classList.add("fadein")
+    setTimeout(function() {
+        document.getElementById("" + randomcolor).classList.remove("fadein")
+    }, 150)
+    randomplaysound(randomcolor)
+}
 //---------------------------------------------------------
 //play random sound 
 function randomplaysound(random_sound) {
