@@ -18,3 +18,16 @@ document.addEventListener('keyup', event => {
         }
     }
 })
+
+//this part is related to the user click on the buttons
+//------------------------------------------------------------
+for (var i = 0; i < btn.length; i++) {
+    btn[i].onclick = function(e) {
+        var usercolor_id = e.target.getAttribute("id")
+            //  console.log(usercolor_id + " hey")
+        userpattern.push(usercolor_id)
+        randomplaysound(usercolor_id)
+        buttonanimation(usercolor_id)
+        compare(userpattern.length - 1)
+    }
+}
