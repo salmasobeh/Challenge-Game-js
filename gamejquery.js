@@ -6,8 +6,6 @@ var game_start = false
 var btn_colors = ["blue", "green", "red", "yellow"]
 var btn = document.getElementsByClassName("btn")
 
-
-
 /// this part is related to pressing the keyboard to the start
 //-----------------------------------------------------------
 $(document).keypress(function() {
@@ -18,7 +16,6 @@ $(document).keypress(function() {
         game_start = true;
     }
 });
-
 
 //--------------------------------------------------------
 // the pattern of the pc
@@ -34,7 +31,6 @@ function patterns() {
     $("#" + randomcolor).fadeIn(100);
     randomplaysound(randomcolor);
 }
-
 
 //this part is related to the user click on the buttons
 //------------------------------------------------------------
@@ -83,7 +79,6 @@ function randomplaysound(random_sound) {
     var audio = new Audio("sounds/" + random_sound + ".mp3");
     audio.play()
 }
-
 
 //---------------------------------------------------------
 //animate the buttons when clicked using class pressed
