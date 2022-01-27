@@ -47,6 +47,36 @@ $(".btn").click(function() {
     buttonanimation(usercolor_id);
     compare(userpattern.length - 1);
 });
+
+// comparing the pattern between user and computer
+//-----------------------------------------------------------
+function compare(index) {
+
+    if (userpattern[index] == pcpattern[index]) {
+        //  console.log(index + "  " + pcpattern[index] + "&" + userpattern[index])
+        if (userpattern.length == pcpattern.length) {
+            setTimeout(function() {
+                patterns();
+            }, 1000);
+        }
+    } else {
+        randomplaysound("wrong");
+        $("body").addClass("game-over");
+        $("#title").text("Game over, Press Any Key to Restart");
+        setTimeout(function() {
+            $("body").removeClass("game-over");
+
+        }, 350);
+
+        //we reset everything
+        pcpattern = [];
+        level = 0;
+        userpattern = [];
+        game_start = false;
+
+    }
+}
+
 //--------------------------------------------------------
 //play random sound 
 function randomplaysound(random_sound) {
