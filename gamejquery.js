@@ -40,3 +40,13 @@ function randomplaysound(random_sound) {
     var audio = new Audio("sounds/" + random_sound + ".mp3");
     audio.play()
 }
+
+
+//---------------------------------------------------------
+//animate the buttons when clicked using class pressed
+function buttonanimation(colorbtn) {
+    $("#" + colorbtn).addClass("pressed");
+    setTimeout(function() {
+        $("#" + colorbtn).removeClass("pressed");
+    }, 150);
+}
