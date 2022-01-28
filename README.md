@@ -21,5 +21,5 @@ Project is written with:
 
 
 ## Screenshots
-![Example screenshot](./image/Capture.png)
+![image](./image/Capture.PNG)
 <!-- If you have screenshots you'd like to share, include them here. -->
