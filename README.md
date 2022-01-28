@@ -4,7 +4,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Screenshots](#screenshots)
+* [Screenshot](#screenshots)
 
 
 ## General Info
@@ -20,6 +20,6 @@ Project is written with:
 * Jquery
 
 
-## Screenshots
+## Screenshot
 ![image](./image/Capture.PNG)
 <!-- If you have screenshots you'd like to share, include them here. -->
